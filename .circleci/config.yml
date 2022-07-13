@@ -36,6 +36,7 @@ jobs:
       - run:
           name: Back-end Deploy
           command: |
+            eb init --region us-east-1 --platform node.js Udagramnodejs-env
             npm run api:deploy
 workflows:
   build-deploy:
